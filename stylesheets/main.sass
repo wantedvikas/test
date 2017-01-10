@@ -1,0 +1,548 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i'
+@import 'base/normalize'
+@import 'base/mixins'
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+a
+  color: inherit
+  text-decoration: none
+
+body
+  margin: 0
+  font-family: 'Roboto', sans-serif
+  line-height: 32px
+  background: white
+  min-width: 320px
+  overflow-x: hidden
+
+ul
+  padding: 0
+
+li
+  list-style: none
+
+.container
+  padding: 0 15px 0 15px
+  margin: 0 auto 0 auto
+  max-width: 1140px
+
+// -- Header
+
+.mainHeader
+  background: white
+  color: #86939E
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10)
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 0px 140px
+  z-index: 1
+
+  +breakpoint ('medium')
+    padding: 10px
+
+.logo
+  vertical-align: middle
+
+.mainNav
+  margin: 0
+  display: inline-block
+
+.mainNav__row
+  margin: 0
+  padding-left: 50px
+
+  & li
+    list-style: none
+    display: inline-block
+    margin-right: 40px
+    padding: 30px 0
+
+    &:hover
+      padding-bottom: 2px
+      border-bottom: 1px dotted #86939E
+
+  +breakpoint ('medium')
+    display: none
+
+.menu-toggle
+  display: none
+  float: right
+  cursor: pointer
+  position: relative
+  top: 6px
+
+  +breakpoint ('medium')
+    display: inline-block
+
+.menu-mobile
+  display: block
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  margin: 0
+  text-align: right
+  background: #F0F4F5
+  color: black
+  padding: 10px
+  width: 100%
+  transform: translateX(100%)
+  transition: transform 350ms ease-in-out
+
+  & li
+    text-align: center
+    padding: 15px
+    border-bottom: 1px dotted gray
+
+.menu-mobile.open
+  transform: translateX(0%)
+
+.menu-close
+  text-align: right
+
+// -- Features
+
+.features
+  margin: 200px 0 140px
+  text-align: center
+
+  +breakpoint ('medium')
+    margin: 100px 0 60px
+
+.features__title
+  margin: 0 0 20px
+  font-size: 52px
+  font-weight: lighter
+
+  +breakpoint ("medium")
+    font-size: 30px
+
+.features__sub-title
+  font-size: 22px
+  font-weight: lighter
+  color: #5E6977
+  max-width: 656px
+  margin: 30px auto 60px auto
+
+  +breakpoint ('medium')
+    font-size: 15px
+    margin: 0 auto 30px auto
+
+.features__image
+  margin: 0 auto 60px
+  max-width: 100%
+
+  +breakpoint ('medium')
+    margin: 0 auto 30px
+
+.features__cards
+  display: flex
+  text-align: left
+  color: #86939E
+
+  +breakpoint ('medium')
+    flex-direction: column
+    justify-content: center
+
+  .col
+    display: flex
+    align-items: center
+    margin-right: 60px
+
+    +breakpoint ('medium')
+      border-bottom: 1px solid #E3EBED
+      margin-right: 0
+
+  .col:last-child
+    margin-right: 0
+
+.features__cards__title
+  margin: 0 0 10px
+  font-size: 18px
+  font-weight: 400;
+  color: black;
+  position: relative;
+  bottom: -10px;
+
+.featues__tex-container
+    margin-left: 25px
+    
+    line-height: 1.5;
+
+// -- Contents
+
+.contents
+  font-size: 16px
+  color: #43484D
+  overflow: hidden
+
+.contents__title
+  font-size: 32px
+  font-weight: lighter
+
+.contents__cta
+  color: #358ED7
+
+  &::after
+    content: ''
+    height: 11px
+    width: 6px
+    background: url("../images/icons/icon-learn-more-arrow.svg") no-repeat
+    display: inline-block
+    position: relative
+    left: 10px
+    bottom: 1px
+
+.contents__slide
+  display: flex
+  flex-wrap: wrap
+
+  +breakpoint ('medium')
+    margin-bottom: 50px
+
+  .col-1
+    margin-right: 95px
+
+    @media (max-width: 1200px)
+      margin-right: 40px
+
+  .col-1__image
+    width: 474px
+    height: 333px
+
+    +breakpoint ('medium')
+      width: 304px
+      height: auto
+
+  .col-2
+    max-width: 500px
+
+    @media (max-width: 1200px)
+      max-width: 400px
+
+    +breakpoint ('medium')
+      padding: 0 15px
+
+
+// Slick Carousel
+
+.slick-dots
+  text-align: left
+  right: 10px
+
+  +breakpoint ('medium')
+    right: 0
+    left: 10px
+    bottom: -44px
+
+.slick-dotted.slick-slider
+  margin-bottom: 30px
+  height: 250px
+
+.slick-dots li button:before
+  font-size: 0.6rem
+  color: #86939E
+
+.slick-dots li.slick-active button:before
+  font-size: 0.8rem
+  color: #358ED7
+
+.slick-next:before
+  content: ""
+  display: block
+  width: 15px
+  height: 28px
+  background: url("../images/icons/icon-slide-next.svg") no-repeat
+  margin-left: 100px
+
+  @media (max-width: 1200px)
+    display: none
+
+// -- Pricing
+
+.pricing
+  text-align: center
+  background: #F9F9F9
+  color: #43484D
+
+  +breakpoint ('medium')
+    padding: 0 15px
+    background: darken(#F9F9F9, 5)
+
+.pricing__title
+  padding-top: 120px
+  margin-bottom: 20px
+  font-size: 52px
+  font-weight: lighter
+
+  +breakpoint ('medium')
+    padding-top: 50px
+    font-size: 30px
+
+.pricing__text
+  font-size: 22px
+  font-weight: lighter
+  max-width: 656px
+  margin: 22px auto
+  margin-bottom: 80px
+
+  +breakpoint ('medium')
+    font-size: 15px
+
+.pricing__table
+  display: flex
+
+  +breakpoint ('medium')
+    flex-direction: column
+
+  .col
+    padding: 30px
+    background: white
+    color: #86939E
+    width: 80%
+    height: auto
+    min-width: 270px
+
+    +breakpoint ('medium')
+      padding: 10px
+      margin: 10px auto
+
+  .col--blue
+    background: #39ADD1
+    color: white
+
+.plan-name
+  color: #358ED7
+  margin: 0
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 500
+  position: relative;
+  bottom: -5px;
+
+.plan-name--white
+  color: white
+
+.plan-description
+  margin: 0
+  padding-bottom: 15px
+  font-size: 16px
+  opacity: 0.60
+  border-bottom: 2px solid #E1E8EE;
+  line-height: 1.6;
+
+.plan-description--info
+  min-height: 130px
+
+  +breakpoint ('medium')
+    min-height: 0
+
+.plan-description--blue-border
+  border-bottom: 2px solid #60BDDA
+
+.price
+  line-height: 1
+  margin: 30px 0 7px
+  font-size: 52px
+  font-weight: lighter
+
+.price-subtitle
+  font-size: 14px
+  line-height: 1
+  opacity: 0.70
+
+.plan-items li
+  position: relative
+  text-align: left
+  line-height: 1.5
+  list-style: none
+  padding: 10px 0 23px 40px
+
+  +breakpoint ('medium')
+    padding-bottom: 10px
+
+  &::before
+    content: ""
+    position: absolute
+    top: 18px
+    left: 10px
+    height: 11px
+    width: 16px
+    background: url("../images/icons/icon-checklist.svg") no-repeat
+    padding-right: 30px
+
+.unavailable
+  color: #BFC7CE
+
+  &::before
+    display: none
+
+  +breakpoint ('medium')
+    line-height: 2
+    font-size: 14px
+
+.get-started
+  display: inline-block
+  background: #white
+  color: #358ED7
+  border: 2px solid #E1E8EE
+  border-radius: 6px
+  font-size: 16px
+  width: 100%
+  padding: 10px
+
+  &:hover
+    background: #E1E8EE
+    transition: background 200ms ease-in-out
+
+.get-started--green
+  background: #7DC855
+  color: white
+  border: 0
+
+  &:hover
+    background: lighten(#7DC855, 5%)
+    transition: background 200ms ease-in-out
+
+// -- Call to Action
+
+.cta
+  margin-top: -100px
+  padding-top: 190px
+  text-align: center
+  background: #5E6977
+  color: white
+
+  +breakpoint ('medium')
+    margin-top: -150px
+
+.cta__title
+  margin-bottom: 20px
+  font-size: 52px
+  font-weight: lighter
+  letter-spacing: -2px
+  line-height: 58px
+
+  +breakpoint ('medium')
+    font-size: 30px
+
+.cta__subtitle
+  font-size: 22px
+  opacity: 0.50
+  max-width: 656px
+  margin: 0 auto
+
+  +breakpoint ('medium')
+    font-size: 18px
+
+.cta__btn
+  display: inline-block
+  margin: 30px 0 60px 0
+  padding: 20px 30px
+  background: #7DC855
+  border-radius: 6px
+  font-weight: 500
+  font-size: 16px
+
+  &:hover
+    background: lighten(#7DC855, 5%)
+    transition: background 200ms ease-in-out
+
+  +breakpoint ('medium')
+    margin: 30px 0
+
+.cta__logo-lead
+  font-size: 18px
+  opacity: 0.60
+
+.companies
+  padding-bottom: 110px
+
+  +breakpoint ('medium')
+    padding-bottom: 50px
+
+.companies__logos
+  height: 36px
+  margin-right: 20px
+
+  +breakpoint ('medium')
+    height: 28px
+    margin-bottom: 20px
+
+// -- Footer
+
+.mainFooter
+  padding: 50px 0 70px
+  background: #545E6B
+  color: #BABEC3
+
+  p, h4
+    margin: 0
+
+.mainFooter__container
+  display: flex
+  padding: 0 15px 0 15px
+  margin: 0 auto 0 auto
+  max-width: 1140px
+  +clearfix
+
+  +breakpoint ('medium')
+    flex-direction: column
+
+.mainFooter__logo
+  height: 68px
+  width: 68px
+  margin-right: 25px
+  top: 6px
+  position: relative
+  float: left
+
+.mainFooter__left
+  margin-right: 55px
+  max-width: 520px
+
+  +breakpoint ('medium')
+    margin: 0 auto 40px auto
+
+.mainFooter__links
+  display: flex
+
+  +breakpoint ('medium')
+    margin: 0 0 20px 0
+
+  .col
+    margin-right: 50px
+
+    +breakpoint ('medium')
+      margin: 0 auto
+
+.mainFooter__right
+  +breakpoint ('medium')
+    text-align: center
+
+.language-dropdown
+  white-space: nowrap
+
+  &::before
+    content: ''
+    display: inline-block
+    background: url('../images/icons/icon-world.svg') no-repeat
+    height: 15px
+    width: 15px
+    margin-right: 10px
+    position: relative
+    top: 2px
+
+  &::after
+    content: ''
+    display: inline-block
+    background: url('../images/icons/icon-language-dropdown.svg') no-repeat
+    width: 8px
+    height: 6px
+    margin-left: 10px

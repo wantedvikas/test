@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="11px" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="Front-end-Developer-Test" transform="translate(-815.000000, -1332.000000)" fill="#358ED7">
+            <g id="Contents-#8" transform="translate(0.000000, 1014.000000)">
+                <g id="Button" transform="translate(815.000000, 318.000000)">
+                    <path d="M0.184028737,5.95455882 C-0.0613429124,5.7035 -0.0613429124,5.2965 0.184028737,5.04544118 L5.02009237,0.0941470588 C5.1426203,-0.0313823529 5.34157028,-0.0313823529 5.46409821,0.0941470588 L5.90810405,0.548705882 C6.03063198,0.674235294 6.03063198,0.877735294 5.90810405,1.00326471 L1.73773339,5.27255882 C1.61520546,5.39808824 1.61520546,5.60191176 1.73773339,5.72711765 L5.90810405,9.99673529 C6.03063198,10.1222647 6.03063198,10.3257647 5.90810405,10.4512941 L5.46409821,10.9058529 C5.34157028,11.0313824 5.1426203,11.0313824 5.02009237,10.9058529 L0.184028737,5.95455882 Z" id="Icon" transform="translate(3.000000, 5.500000) scale(-1, 1) translate(-3.000000, -5.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
